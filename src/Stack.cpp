@@ -25,10 +25,11 @@ void Stack::push(int value) {
 		theNewStack[i]=theStack[i];
 	}
   	delete[] theStack;
-	assert(top!=maxSize);
   	theStack=theNewStack;
+	maxSize=maxSize*2;
   }
-  //assert(top!=maxSize);
+
+  assert(top!=maxSize);
   theStack[top] = value;
   top++;
 }

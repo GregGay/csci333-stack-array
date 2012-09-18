@@ -17,7 +17,7 @@ TEST(StackTest, Push) {
 TEST(StackTest, PushPastCapacity) {
   Stack* s = new Stack();
   //s->push(6);
-  for (int i = 0; i < 10; ++i) {
+  for (int i=0; i<10; ++i) {
   	s->push(i);
   }
   EXPECT_EQ(9, s->peek());
@@ -25,7 +25,7 @@ TEST(StackTest, PushPastCapacity) {
 }
 
 TEST(StackTest, Resize) {
-  Stack* s = new Stack(6);
+  Stack* s = new Stack(3);
   s->push(1);
   s->push(2);
   s->push(3);
